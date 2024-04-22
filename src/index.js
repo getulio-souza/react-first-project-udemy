@@ -80,7 +80,7 @@ const EventExamples = () => {
 
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author, getBook, id } = props;
   // console.log(props);
 
   const displayTitle = () => {
@@ -91,7 +91,7 @@ const Book = (props) => {
     <article className="book">
       <img src={img} />
       <p>{title}</p>
-      <button onClick={displayTitle}>display title</button>
+      <button onClick={getBook(id)}>display title</button>
       <p>{author}</p>
     </article>
   );
